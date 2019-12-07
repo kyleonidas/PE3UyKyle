@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Code Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version Nos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Release Date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="API Level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <EditText
+        android:id="@+id/CodeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <EditText
+        android:id="@+id/VersionNos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/CodeName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/ReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/VersionNos"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/APILevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/ReleaseDate"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addRecord"
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/APILevel"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/Update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="editRecord"
+        android:text="UPDATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@+id/Add"
+        app:layout_constraintTop_toBottomOf="@+id/APILevel"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/Delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deleteRecord"
+        android:text="DELETE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toEndOf="@+id/Update"
+        app:layout_constraintTop_toBottomOf="@+id/APILevel"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/First"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="first"
+        android:text="FIRST"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Add"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <Button
+        android:id="@+id/Previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="previous"
+        android:text="PREVIOUS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@+id/First"
+        app:layout_constraintTop_toBottomOf="@+id/Update"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="next"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/Previous"
+        app:layout_constraintTop_toBottomOf="@+id/Update"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <Button
+        android:id="@+id/Last"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="last"
+        android:text="LAST"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toEndOf="@+id/Next"
+        app:layout_constraintTop_toBottomOf="@+id/Delete"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <Button
+        android:id="@+id/Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Previous"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <Button
+        android:id="@+id/ViewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIEW ALL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toEndOf="@+id/Clear"
+        app:layout_constraintTop_toBottomOf="@+id/Next"
+        app:layout_constraintVertical_bias="0.100000024" />
+</androidx.constraintlayout.widget.ConstraintLayout>
